@@ -1,5 +1,4 @@
 node('master'){
-    stages{
         stage('Intialize'){
             checkout scm
             sh '''
@@ -14,5 +13,4 @@ node('master'){
         stage('build'){
             sh 'npm run build'
         }
-    }
 }
