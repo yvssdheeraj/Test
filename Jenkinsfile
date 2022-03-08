@@ -2,7 +2,7 @@ node('master'){
         stage('Intialize'){
             checkout scm
             sh '''
-            curl -fsSL https://deb.nodesource.com/setup_16.x | bash 
+            curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash 
             && sudo apt-get install -y nodejs
              '''
             sh 'npm i'
