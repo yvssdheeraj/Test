@@ -1,4 +1,4 @@
-FROM nginx
-COPY nginx.conf /etc/nginx
-RUN mkdir /tmp/test
+FROM node
+RUN npm install -g serve
 COPY build  /tmp/test
+ENTRYPOINT [ "serve -s build" ]
